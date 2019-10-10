@@ -31,12 +31,13 @@ public class NactiKnihu
         filePath = sc.next()+".txt";
         lineCount = PocetRadku();
         text = new String[lineCount];
-        System.out.println("Jaky slovo chcete vyhledat?");
+        /*System.out.println("Jaky slovo chcete vyhledat?");
         Scanner sd = new Scanner(System.in);
-        slovo = sd.next();
+        slovo = sd.next();*/
         NactiKnihu();
-        Prectiknihu();
-        System.out.println("Slovo "+slovo+" se vyskytuje v knize "+KolikratSeVyskytuje(slovo));
+        PrectiKapitolu();
+        //Prectiknihu();
+        //System.out.println("Slovo "+slovo+" se vyskytuje v knize "+KolikratSeVyskytuje(slovo));
     }
     
     public int PocetRadku()throws FileNotFoundException, UnsupportedEncodingException, IOException
@@ -89,15 +90,349 @@ public class NactiKnihu
         cislo = ((text.length() - DelkaTextuPoOdectu)/slovo.length());
         return cislo;
     }
+    
+    public void PrectiKapitolu()throws FileNotFoundException, UnsupportedEncodingException, IOException
+    {
+        System.out.println("Jakou kapitolu chcete vypsat? (napiste cislo)");
+        Scanner sd = new Scanner(System.in);
+        slovo = sd.next();
+        switch(slovo)
+        {
+            case "1": NacitKapitolu(1); break;
+            case "2": NacitKapitolu(2); break;
+            case "3": NacitKapitolu(3); break;
+            case "4": NacitKapitolu(4); break;
+            case "5": NacitKapitolu(5); break;
+            case "6": NacitKapitolu(6); break;
+            case "7": NacitKapitolu(7); break;
+            case "8": NacitKapitolu(8); break;
+            case "9": NacitKapitolu(9); break;
+            case "10": NacitKapitolu(10); break;
+            case "11": NacitKapitolu(11); break;
+            case "12": NacitKapitolu(12); break;
+            default: System.out.println("Tato kapitola v knize není.");break;
+        }
+    }
+ 
+    public void NacitKapitolu(int k)throws FileNotFoundException, UnsupportedEncodingException, IOException
+    {
+        String text = "";
+        int lineCount2 = 0;
+        String line = null;
+        String[] kapitola = new String[PocetRadku()];
+        int delka = kapitola.length;
+        int indexd = 0;
+        String veta;
+        BufferedReader bReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), fileEncoding));
+        Scanner scannerKniha = new Scanner(new FileReader(filePath));
+        while((line = bReader.readLine()) != null)
+        {
+                kapitola[lineCount2] = scannerKniha.nextLine(); 
+                lineCount2++;
+        }
+        switch(k)
+        {
+            case 1:    delka = kapitola.length;
+                       indexd = 0;
+                        for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER I");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER II");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 2: 
+                       delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER II");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER III");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 3:    delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER III");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER IV");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 4:    delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER IV");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER V");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 5:    delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER V");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER VI");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 6:    delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER VI");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER VII");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 7:    delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER VII");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER VIII");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 8:    delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER VIII");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER IX");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 9:    delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER IX");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER X");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 10:   delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER X");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER XI");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 11:   delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER XI");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
+                       
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER XII");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            case 12:   delka = kapitola.length;
+                       indexd = 0;
+                       for(int j = 0;j<delka;j++)
+                       {
+                           veta = kapitola[j];
+                           int index = veta.indexOf("CHAPTER XI");
+                           if(index != -1)
+                           {
+                               indexd = index;
+                               break;
+                           }
+                       }
 
-
-//\IA== ABSTRACT METHODS =======================================================
-//\IG== INSTANCE GETTERS AND SETTERS ===========================================
-//\IM== OTHER NON-PRIVATE INSTANCE METHODS =====================================
-//\IP== PRIVATE AND AUXILIARY INSTANCE METHODS =================================
-
-
-
-//##############################################################################
-//\NT== NESTED DATA TYPES ======================================================
+                       for(int i = indexd;i<delka;i++)
+                       {
+                           int index = kapitola[i].indexOf("CHAPTER XII");
+                               if(index == -1)
+                               {
+                                   System.out.println(kapitola[i]);
+                               }
+                               else
+                               {
+                                   break;
+                               }
+                       } break;
+            default: System.out.println("Tato kapitola v knize není.");break;
+        }
+    }
 }
