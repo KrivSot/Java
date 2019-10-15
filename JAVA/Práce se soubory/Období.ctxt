@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Obdob\u00ED
+comment1.params=str\ pSD
+comment1.target=Obdob\u00ED(java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getParametry()
+comment3.params=obdob\u00ED
+comment3.target=java.lang.String\ \u010Dinnost(Obdob\u00ED)
+numComments=4
