@@ -42,7 +42,7 @@ public class Osoba
            {
                case 0: ridic[i] = false; break;
                case 1: if(predchozi){ predchozi = !predchozi; break; }
-                       else{ridic[i] = true; predchozi = !predchozi; break;}
+                       else{ ridic[i] = true; predchozi = !predchozi; break; }
                default: System.out.println("Chyba"); break;
            }
        }
@@ -118,6 +118,14 @@ public class Osoba
                 }
             }
         }
-        System.out.println("Dojeli jste do cíle. Zbytek lidí vystoupilo a nebo jde/jede dál");
+        System.out.println("Dojeli jste do cíle");
+        for(int i = 0;i<this.Vzdalenost.length;i++)
+        {
+            if(Vzdalenost[i] > this.vzdalenost)
+            {
+                System.out.print(osoby[i]+", ");
+            }
+        }
+        System.out.print("jdou/jedou dál");
     }
 }

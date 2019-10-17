@@ -7,17 +7,20 @@
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.Scanner;
 /*******************************************************************************
- * Instance třídy {@code Aplikace} představují ...
- * The {@code Aplikace} class instances represent ...
+ * Třída {@code App} je hlavní třídou projektu,
+ * který ...
  *
  * @author  author name
  * @version 0.00.0000 — 20yy-mm-dd
  */
-public class Aplikace
+public class Applikace
 {
     /***************************************************************************
+     * Metoda, prostřednictvím níž se spouští celá aplikace.
+     *
+     * @param args Parametry příkazového řádku
      */
-    public Aplikace()throws InterruptedException
+    public static void main(String[] args)throws InterruptedException
     {
        Osoba osb = new Osoba();
        System.out.println("Chce jet " +osb.PocetOsob()+" z toho "+osb.Ridici()+" mají auto");
