@@ -21,6 +21,7 @@ public class NactiKnihu
     String fileEncoding = "UTF-8";
     String slovo;
     String[] text;
+    int pocet;
     /***************************************************************************
      */
     public NactiKnihu()throws FileNotFoundException, UnsupportedEncodingException, IOException
@@ -31,13 +32,14 @@ public class NactiKnihu
         filePath = sc.next()+".txt";
         lineCount = PocetRadku();
         text = new String[lineCount];
-        /*System.out.println("Jaky slovo chcete vyhledat?");
+        System.out.println("Jaky slovo chcete vyhledat?");
         Scanner sd = new Scanner(System.in);
-        slovo = sd.next();*/
+        slovo = sd.next();
+        pocet = KolikratSeVyskytuje(slovo);
         NactiKnihu();
         PrectiKapitolu();
-        //Prectiknihu();
-        //System.out.println("Slovo "+slovo+" se vyskytuje v knize "+KolikratSeVyskytuje(slovo));
+        Prectiknihu();
+        System.out.println("Slovo "+slovo+" se vyskytuje v knize "+pocet);
     }
     
     public int PocetRadku()throws FileNotFoundException, UnsupportedEncodingException, IOException
@@ -94,9 +96,9 @@ public class NactiKnihu
     public void PrectiKapitolu()throws FileNotFoundException, UnsupportedEncodingException, IOException
     {
         System.out.println("Jakou kapitolu chcete vypsat? (napiste cislo)");
-        Scanner sd = new Scanner(System.in);
-        slovo = sd.next();
-        switch(slovo)
+        Scanner sf = new Scanner(System.in);//vytvorit aplikaci, ktera umozni sdilenou jizdu osob (sever,severovychod vychod zapad severozapad,jih, JZ, JV) trida osoba,odoby co jedou a maji auto jedou, ty co nemaji taky chteji jet nekam, auto vezme na palubu lidid co chteji jet, ale musi jet stejnym smerem, musi zadat vzdalenost, kontroluji se kilometry a az doběhnout tak osoba vystoupí
+        String slovo2 = sf.next();
+        switch(slovo2)
         {
             case "1": NacitKapitolu(1); break;
             case "2": NacitKapitolu(2); break;

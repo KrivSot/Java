@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Osoba
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Osoba}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Osoba}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=
+comment1.target=Osoba()
+comment1.text=\r\n
+comment2.params=Int\ smer
+comment2.target=Smer\ SmerJizdy(int,\ Smer)
+comment3.params=cislo\ pole
+comment3.target=java.lang.String[]\ NaplnLidi(int,\ java.lang.String[])
+comment4.params=
+comment4.target=int\ PocetOsob()
+comment5.params=
+comment5.target=int\ Ridici()
+comment6.params=
+comment6.target=void\ ujetavzdalenost()
+numComments=7
