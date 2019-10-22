@@ -22,9 +22,9 @@ public class Applikace
      */
     public static void main(String[] args)throws InterruptedException
     {
-       Osoba osb = new Osoba();
+       /*Osoby osb = new Osoby();
        System.out.println("Chce jet " +osb.PocetOsob()+" z toho "+osb.Ridici()+" mají auto");
        System.out.println("Kolik lidí chcete nabrat ?");
-       osb.ujetavzdalenost();
+       osb.jet();*/
     }
 }
