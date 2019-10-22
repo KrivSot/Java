@@ -56,6 +56,11 @@ public class Osoba
        }
     }
     
+    public Osoba(String jméno, Smer smer, Boolean JeRidic,int vzdalenost)
+    {
+        
+    }
+    
     public Smer SmerJizdy(int Int,Smer smer)
     {
        switch(Int)
