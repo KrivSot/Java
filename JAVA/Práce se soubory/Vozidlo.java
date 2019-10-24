@@ -17,7 +17,7 @@ public class Vozidlo
     public Vozidlo(Osoby osb)
     {
         boolean r = osb.JeRidic();
-        if((maRidice == false) && (r = true))
+        if((maRidice == false) && (r == true))
         {
             this.osoby[0] = osb;
             maRidice = true;
@@ -25,7 +25,7 @@ public class Vozidlo
         }
         else
         {
-            System.out.println("Osoba neni ridic");
+            System.out.println("Osoba není ridič!!");
         }
     }
     
