@@ -1,8 +1,3 @@
-/* UTF-8 codepage: Příliš žluťoučký kůň úpěl ďábelské ódy. ÷ × ¤
- * «Stereotype», Section mark-§, Copyright-©, Alpha-α, Beta-β, Smile-☺
- */
-
-
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 /*******************************************************************************
@@ -19,8 +14,6 @@ public class Vozidlo
     Boolean maRidice = false;
     Smer smer;
     int[] lidiV;
-    /***************************************************************************
-     */
     public Vozidlo(Osoby osb)
     {
         boolean r = osb.JeRidic();

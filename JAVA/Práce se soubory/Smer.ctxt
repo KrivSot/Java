@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Smer
-comment0.text=\r\n\ Instance\ v\u00FD\u010Dtov\u00E9ho\ typu\ {@code\ Smer}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Smer}\ enum\ type\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment0.text=\r\n\ Instance\ v\u00FD\u010Dtov\u00E9ho\ typu\ {@code\ Smer}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Smer}\ enum\ type\ instances\ represent\ ...\r\n\r\n\ @author\ \ Kry\u0161tof\ Jania\r\n\ @version\ 1.00.0000\ \u2014\ 2019-10-24\r\n
 comment1.params=smer
 comment1.target=Smer(java.lang.String)
 numComments=2

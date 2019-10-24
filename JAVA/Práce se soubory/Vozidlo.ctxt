@@ -3,7 +3,6 @@ comment0.target=Vozidlo
 comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Vozidlo}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Vozidlo}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ Kry\u0161tof\ Jania\r\n\ @version2\ 2.00.0000\ \u2014\ 2019-10-24\r\n
 comment1.params=osb
 comment1.target=Vozidlo(Osoby)
-comment1.text=\r\n
 comment10.params=
 comment10.target=void\ KdoJedeDal()
 comment2.params=
