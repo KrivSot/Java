@@ -1,11 +1,12 @@
 #BlueJ class context
 comment0.target=Osoby
 comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Osoba}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Osoba}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
-comment1.params=
-comment1.target=Osoby()
-comment1.text=\r\n
-comment2.params=jm\u00E9no\ smer\ JeRidic\ vzdalenost
-comment2.target=Osoby(java.lang.String,\ Smer,\ boolean,\ int)
+comment1.params=jm\u00E9no\ smer\ JeRidic\ vzdalenost
+comment1.target=Osoby(java.lang.String,\ Smer,\ boolean,\ int)
+comment2.params=
+comment2.target=boolean\ JeRidic()
 comment3.params=
-comment3.target=boolean\ JeRidic()
-numComments=4
+comment3.target=int\ Vzd\u00E1lenost()
+comment4.params=
+comment4.target=Smer\ smer()
+numComments=5
