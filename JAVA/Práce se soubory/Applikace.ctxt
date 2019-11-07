@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Applikace
+comment0.text=\r\n\ T\u0159\u00EDda\ {@code\ Applikace}\ je\ hlavn\u00ED\ t\u0159\u00EDdou\ projektu,\r\n\ kter\u00FD\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ Jmeno()
+comment3.params=
+comment3.target=java.lang.String\ nactiosoby()
+numComments=4

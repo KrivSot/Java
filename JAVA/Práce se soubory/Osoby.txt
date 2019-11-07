@@ -1,0 +1,2 @@
+Krystof,ZAPAD,true,60;
+Krysatof,JIH,false,50;

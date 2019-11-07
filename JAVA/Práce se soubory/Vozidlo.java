@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
  * The {@code Vozidlo} class instances represent ...
  *
  * @author  Kryštof Jania
- * @version2 2.00.0000 — 2019-10-24
+ * @version2 3.00.0000 — 2019-11-07
  */
 public class Vozidlo
 {
@@ -13,7 +13,6 @@ public class Vozidlo
     Osoby[] osoby = new Osoby[5];
     Boolean maRidice = false;
     Smer smer;
-    int[] lidiV;
     public Vozidlo(Osoby osb)
     {
         boolean r = osb.JeRidic();
@@ -21,6 +20,7 @@ public class Vozidlo
         {
             this.osoby[0] = osb;
             maRidice = true;
+            this.smer = osb.smer;
             pocetlidi++;
         }
         else
@@ -31,6 +31,11 @@ public class Vozidlo
     
     public Vozidlo(){}
 
+    public void VypisSmer()
+    {
+        System.out.println(this.smer);
+    }
+    
     public boolean MaRidice()
     {
         return maRidice;
@@ -50,14 +55,25 @@ public class Vozidlo
     
     public void pridejOsobu(Osoby osb)
     {
-        if(pocetlidi < 5)
+        if(pocetlidi < 5 && maRidice == true)
         {
-            this.osoby[pocetlidi] = osb;
-            pocetlidi++;
+            if(this.osoby[0].smer == osb.smer)
+            {
+                this.osoby[pocetlidi] = osb;
+                pocetlidi++;
+            }
+            else
+            {
+                System.out.println("Osoba nejede stejným směrem");
+            }
+        }
+        else if(maRidice == true)
+        {
+            System.out.println("Víc lidí se do auta nevejde.");
         }
         else
         {
-            System.out.println("Víc lidí se do auta nevejde");
+            System.out.println("Vozidlo nemá řidiče.");
         }
     }
     
@@ -68,15 +84,16 @@ public class Vozidlo
         {
             this.osoby[0] = osb;
             maRidice = true;
+            this.smer = osb.smer;
             pocetlidi++;
         }
         else if(r==false)
         {
-            System.out.println("Osoba není ridič!!");
+            System.out.println("Osoba není ridič!");
         }
         else
         {
-            System.out.println("auto už má řidiče.");
+            System.out.println("Auto už má řidiče.");
         }
     }
     
@@ -84,11 +101,14 @@ public class Vozidlo
     {
        if(this.maRidice == true)
        {
-           StejnySmer();
+           //StejnySmer();
            Jet();
            System.out.println("Dojeli jste do cíle");
            System.out.println();
            KdoJedeDal();
+           this.osoby[0] = null;
+           this.smer = null;
+           this.pocetlidi = 0;
        }
        else
        {
@@ -123,9 +143,10 @@ public class Vozidlo
                {
                    if(this.osoby[j] != null)
                    {
-                       if(this.osoby[j].vzdálenost == i && this.osoby[j].smer == this.osoby[0].smer)
+                       if(this.osoby[j].vzdálenost == i)
                        {
-                           System.out.println("Cestujici "+ osoby[j].jméno+" vystoupil na "+i+"kilometru");
+                           System.out.println("Cestujici "+ osoby[j].jméno+" vystoupil na "+i+". kilometru");
+                           this.osoby[j] = null;
                            Thread.sleep(1500);
                        }
                    }
@@ -139,9 +160,10 @@ public class Vozidlo
            {
                if(osoby[i] != null)
                {
-                   if(osoby[i].vzdálenost > osoby[0].vzdálenost && this.osoby[i].smer == this.osoby[0].smer)
+                   if(osoby[i].vzdálenost > osoby[0].vzdálenost)
                    {
                        System.out.print(osoby[i].jméno+", ");
+                       this.osoby[i] = null;
                        System.out.print("jde/jede dál.");
                        System.out.println();
                    }

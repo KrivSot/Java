@@ -22,6 +22,14 @@ public class Osoby
         this.smer = smer;
     }
     
+    public Osoby(String jméno, Smer smer,int vzdalenost)
+    {
+        this.ridic = false;
+        this.vzdálenost = vzdalenost;
+        this.jméno = jméno;
+        this.smer = smer;
+    }
+    
     public boolean JeRidic()
     {
         return this.ridic;
@@ -35,5 +43,10 @@ public class Osoby
     public Smer smer()
     {
         return this.smer;
+    }
+    
+    public String JmenoOsoby()
+    {
+        return this.jméno;
     }
 }
