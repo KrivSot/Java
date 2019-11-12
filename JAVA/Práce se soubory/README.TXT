@@ -23,12 +23,12 @@ VERZE A DATUM:
 ÚČEL PROJEKTU:
 ==============
 
-
+To destroy the world goverment and steal all the cheese in the galaxy.
 
 JAK PROJEKT SPUSTIT:
 ====================
 
-
+IDK man ask somebody who is profesional.
 
 INSTRUKCE PRO UŽIVATELE:
 ========================

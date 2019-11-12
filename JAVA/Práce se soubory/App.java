@@ -18,14 +18,32 @@ public class App
 {
 
     String FilePath = "Osoby.txt";
-    int[] Vzdalenost;
+    Osoby[] osoby;
+    boolean maridice = false;
     /***************************************************************************
      */
-    public App()
+    public App()throws FileNotFoundException, UnsupportedEncodingException, IOException, InterruptedException
     {
+        Vozidlo vzd = new Vozidlo();
+        this.osoby = nactiosoby();
+        for(int i = 0;i<osoby.length;i++)
+        {
+            if(this.osoby[i].JeRidic() && maridice == false)
+            {
+                vzd.pridejridice(osoby[0]); maridice = true; break;
+            }
+            else if(maridice == false) { System.out.println("Žádna z osob není řidič"); }
+            else{ break; }
+        }
+        
+        for(int i = 1;i<osoby.length;i++)
+        {
+            vzd.pridejOsobu(osoby[i]);
+        }
+        vzd.jedem();
     }
 
-    private String nactiosoby()throws FileNotFoundException, UnsupportedEncodingException, IOException
+    private Osoby[] nactiosoby()throws FileNotFoundException, UnsupportedEncodingException, IOException
     {
         int pocetr = 0;
         int pocet = 0;
@@ -35,22 +53,27 @@ public class App
         {
             pocetr++;
         }
+        Osoby[] osoby = new Osoby[pocetr];
         String[] text = new String[pocetr];
-        Vzdalenost = new int[pocetr];
         BufferedReader bReader2 = new BufferedReader(new InputStreamReader(new FileInputStream(FilePath), "UTF-8"));
         while((line = bReader2.readLine()) != null)
         {
             text[pocet] = line; 
             pocet++;
         }
-        int carka = text[0].indexOf(",",0);
-        String jmeno = text[0].substring(0,carka);
-        int carka2 = text[0].indexOf(",",carka+1);
-        Smer smer2 = Smer.valueOf(text[0].substring(carka+1,carka2));
-        int carka3 = text[0].indexOf(",",carka2+1);
-        boolean ridic = Boolean.valueOf(text[0].substring(carka2+1,carka3));
-        int v = Integer.valueOf(text[0].substring(carka3+1,text[0].indexOf(";")));
-        return jmeno;
+        
+        for(int i=0;i<pocetr;i++)
+        {
+            int carka = text[i].indexOf(",",0);
+            String jmeno = text[i].substring(0,carka);
+            int carka2 = text[i].indexOf(",",carka+1);
+            Smer smer2 = Smer.valueOf(text[i].substring(carka+1,carka2));
+            int carka3 = text[i].indexOf(",",carka2+1);
+            boolean ridic = Boolean.valueOf(text[i].substring(carka2+1,carka3));
+            int v = Integer.valueOf(text[i].substring(carka3+1,text[i].indexOf(";")));
+            osoby[i] = new Osoby(jmeno,smer2,ridic,v);
+        }
+        return osoby;
     }
 
 

@@ -5,5 +5,5 @@ comment1.params=
 comment1.target=App()
 comment1.text=\r\n
 comment2.params=
-comment2.target=java.lang.String\ nactiosoby()
+comment2.target=Osoby[]\ nactiosoby()
 numComments=3

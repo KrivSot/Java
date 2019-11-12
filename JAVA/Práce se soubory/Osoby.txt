@@ -1,2 +1,6 @@
 Krystof,ZAPAD,true,60;
 Krysatof,JIH,false,50;
+Krystofa,ZAPAD,false,40;
+Krystofb,ZAPAD,false,57;
+Krystofc,ZAPAD,true,420;
+Krystofd,ZAPAD,true,75;
