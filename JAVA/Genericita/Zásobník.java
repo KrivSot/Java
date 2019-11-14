@@ -35,6 +35,9 @@ public class Zásobník<T1>
             this.last.next = n;
             this.last.next.previous = j;
             this.last = n;
+            /*T1 prvek1 = get(size-2);
+            Node k = new Node(prvek);
+            this.last.previous.previous = k;*/
             size++;
         }
         else
