@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Trida
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Trida}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Trida}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=promenna1\ promenna2
+comment1.target=Trida(java.lang.Object,\ java.lang.Object)
+comment2.params=
+comment2.target=void\ vypisAtributy()
+comment3.params=
+comment3.target=void\ vypisAtribut1()
+comment4.params=
+comment4.target=void\ vypisAtribut2()
+comment5.params=
+comment5.target=boolean\ porovnej()
+numComments=6
