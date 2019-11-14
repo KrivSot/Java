@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Z\u00E1sobn\u00EDk
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Z\u00E1sobn\u00EDk}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Z\u00E1sobn\u00EDk}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=maximalni_pocet
+comment1.target=Z\u00E1sobn\u00EDk(int)
+comment2.params=prv
+comment2.target=void\ add(java.lang.Object)
+comment3.params=i
+comment3.target=void\ remove(int)
+comment3.text=\r\n\ Smaze\ prvek\ na\ indexu\ i\r\n\ @param\ i\ index\ mazaneho\ prvku\r\n\ @throws\ IndexOutOfBoundsException\ pokud\ je\ i\ vyssi\ nebo\ rovna\ delce\ seznamu\r\n\ @throws\ IllegalArgumentException\ pokud\ je\ i\ zaporne\r\n
+comment4.params=
+comment4.target=int\ size()
+comment5.params=i
+comment5.target=java.lang.Object\ get(int)
+numComments=6
