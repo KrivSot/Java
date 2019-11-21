@@ -1,16 +1,14 @@
 #BlueJ class context
-comment0.target=Garaz
+comment0.target=SingleLinkedList
 comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Z\u00E1sobn\u00EDk}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Z\u00E1sobn\u00EDk}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
-comment1.params=maximalni_pocet_aut
-comment1.target=Garaz(int)
+comment1.params=
+comment1.target=SingleLinkedList()
 comment10.params=
 comment10.target=java.lang.Object\ getFirst()
 comment11.params=
 comment11.target=java.lang.Object\ getLast()
-comment12.params=i
-comment12.target=void\ set(int)
-comment2.params=znacka\ PocetSedadel
-comment2.target=void\ add(java.lang.Object,\ java.lang.Object)
+comment2.params=znacka
+comment2.target=void\ add(java.lang.Object)
 comment3.params=i
 comment3.target=void\ remove(int)
 comment3.text=\r\n\ Smaze\ prvek\ na\ indexu\ i\r\n\ @param\ i\ index\ mazaneho\ prvku\r\n\ @throws\ IndexOutOfBoundsException\ pokud\ je\ i\ vyssi\ nebo\ rovna\ delce\ seznamu\r\n\ @throws\ IllegalArgumentException\ pokud\ je\ i\ zaporne\r\n
@@ -26,4 +24,4 @@ comment8.params=
 comment8.target=void\ removeFirst()
 comment9.params=
 comment9.target=void\ removeLast()
-numComments=13
+numComments=12

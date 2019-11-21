@@ -7,11 +7,11 @@ import java.util.*;
  * @author  author name
  * @version 0.00.0000 — 20yy-mm-dd
  */
-public class Garaz <T1>
+public class SingleLinkedList <T1>
 {
     
     private T1 promenna1;
-    int pocet = 0;
+    int pocet = 50;
     //int pocetsedadel = 0;
     private Node first;
     private Node last;
@@ -20,25 +20,25 @@ public class Garaz <T1>
     private int size;
     //ArrayList<String> list = new ArrayList<String>();
     
-    public Garaz(int maximalni_pocet_aut)
+    public SingleLinkedList(/*int maximalni_pocet_aut*/)
     {
-        this.pocet = maximalni_pocet_aut;
+        //this.pocet = maximalni_pocet_aut;
     }
     
-    public void add(T1 znacka, T1 PocetSedadel) {
+    public void add(T1 znacka/*, T1 PocetSedadel*/) {
         Node n = new Node(znacka);
-        Node f = new Node(PocetSedadel);
+        //Node f = new Node(PocetSedadel);
         if (size == 0) {
             this.first = n;
-            this.PocetSedadel = f;
-            this.first.PocetSedadel = f;
+            //this.PocetSedadel = f;
+            //this.first.PocetSedadel = f;
             this.first.previous = null;
             this.last = n;
             size++;
         } else if(pocet > size) {
             this.previous = last;
-            this.PocetSedadel.next = f;
-            this.last.PocetSedadel = f;
+            //this.PocetSedadel.next = f;
+            //this.last.PocetSedadel = f;
             this.last.next = n;
             this.last = n;
             this.last.previous = previous;
@@ -65,6 +65,7 @@ public class Garaz <T1>
         }
         if (i == 0) {
             first = first.next;
+            first.previous = null;
         } else {
             Node curr = first;
             for (int j = 0; j < i - 1; j++) { //najdeme predchozi
@@ -105,6 +106,7 @@ public class Garaz <T1>
         n.next = this.first;
         this.first = n;
         this.first.previous = null;
+        size++;
     }
     
     public void addLast(T1 znacka)
@@ -119,6 +121,7 @@ public class Garaz <T1>
     
     public void removeFirst() {
         first = first.next;
+        first.previous = null;
         size--;
     }
     
@@ -129,22 +132,27 @@ public class Garaz <T1>
    
     public T1 getFirst() {
         Node prvek = first;
-        for (int j = 0; j < 0; j++) {
-            prvek = prvek.next;
-        }
         return prvek.objekt;
     }
     
     public T1 getLast() {
         Node prvek = first;
-        for (int j = 0; j < size-1; j++) {
+        for (int j = 0; j < size -1; j++) {
             prvek = prvek.next;
         }
         return prvek.objekt;
     }
     
-    public void set(int i)
-    {}
+    /*public void set(int i,T1 znacka)
+    {
+        Node curr = first;
+        Node n = new Node(znacka);
+            for (int j = 0; j < i - 1; j++) { //najdeme predchozi
+                n = curr.next;
+            }
+        this.last = n;
+        //curr.next.previous = n;//a mazany prvek vynechame
+    }*/
     
     /*public void vloz()throws InterruptedException
     {
