@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Barva
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Barva}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Barva}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=color
+comment1.target=Barva(java.lang.Object)
+comment2.params=color
+comment2.target=void\ setColor(java.lang.Object)
+comment3.params=
+comment3.target=java.lang.Object\ getColor()
+numComments=4
