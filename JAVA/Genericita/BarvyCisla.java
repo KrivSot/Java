@@ -18,7 +18,7 @@ public enum BarvyCisla
 
     Zelená (0,255,0),
     Červená (255,0,0),
-    Modrá(0,0,255);
+    Modrá (0,0,255);
     
     private int r;
     private int g;
