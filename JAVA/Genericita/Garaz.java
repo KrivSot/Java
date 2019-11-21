@@ -7,42 +7,46 @@ import java.util.*;
  * @author  author name
  * @version 0.00.0000 — 20yy-mm-dd
  */
-public class Zásobník<T1>
+public class Garaz <T1>
 {
     
     private T1 promenna1;
     int pocet = 0;
+    //int pocetsedadel = 0;
     private Node first;
     private Node last;
+    private Node previous;
+    private Node PocetSedadel;
     private int size;
     //ArrayList<String> list = new ArrayList<String>();
     
-    public Zásobník(int maximalni_pocet)
+    public Garaz(int maximalni_pocet_aut)
     {
-        this.pocet = maximalni_pocet;
+        this.pocet = maximalni_pocet_aut;
     }
     
-    public void add(T1 prv) {
-        Node n = new Node(prv);
+    public void add(T1 znacka, T1 PocetSedadel) {
+        Node n = new Node(znacka);
+        Node f = new Node(PocetSedadel);
         if (size == 0) {
             this.first = n;
+            this.PocetSedadel = f;
+            this.first.PocetSedadel = f;
             this.first.previous = null;
             this.last = n;
             size++;
         } else if(pocet > size) {
-            T1 prvek = get(size-1);
-            Node j = new Node(prvek);
+            this.previous = last;
+            this.PocetSedadel.next = f;
+            this.last.PocetSedadel = f;
             this.last.next = n;
-            this.last.next.previous = j;
             this.last = n;
-            /*T1 prvek1 = get(size-2);
-            Node k = new Node(prvek);
-            this.last.previous.previous = k;*/
+            this.last.previous = previous;
             size++;
         }
         else
         {
-            System.out.println("zásobník je plný");
+            System.out.println("Garáž je plná.");
         }        
     }
     
@@ -65,8 +69,10 @@ public class Zásobník<T1>
             Node curr = first;
             for (int j = 0; j < i - 1; j++) { //najdeme predchozi
                 curr = curr.next;
+                curr.previous = curr.previous.previous;
             }
-            curr.next = curr.next.next; //a mazany prvek vynechame
+            curr.next = curr.next.next;
+            curr.next.previous = curr.next.previous;//a mazany prvek vynechame
             if (i == size - 1) { //pokud mazeme posledni
                 last = curr;
             }
@@ -91,6 +97,54 @@ public class Zásobník<T1>
         }
         return prvek.objekt;
     }
+    
+    public void addFirst(T1 znacka)
+    {
+        Node n = new Node(znacka);
+        this.first.previous = n;
+        n.next = this.first;
+        this.first = n;
+        this.first.previous = null;
+    }
+    
+    public void addLast(T1 znacka)
+    {
+        Node n = new Node(znacka);
+        this.previous = last;
+        this.last.next = n;
+        this.last = n;
+        this.last.previous = previous;
+        size++;
+    }
+    
+    public void removeFirst() {
+        first = first.next;
+        size--;
+    }
+    
+    public void removeLast() {
+        this.last = last.previous;
+        size--;
+    }
+   
+    public T1 getFirst() {
+        Node prvek = first;
+        for (int j = 0; j < 0; j++) {
+            prvek = prvek.next;
+        }
+        return prvek.objekt;
+    }
+    
+    public T1 getLast() {
+        Node prvek = first;
+        for (int j = 0; j < size-1; j++) {
+            prvek = prvek.next;
+        }
+        return prvek.objekt;
+    }
+    
+    public void set(int i)
+    {}
     
     /*public void vloz()throws InterruptedException
     {
@@ -153,6 +207,7 @@ public class Zásobník<T1>
         private T1 objekt;
         private Node next;
         private Node previous;
+        private Node PocetSedadel;
 
         private Node(T1 value) {
             this.objekt = value;
