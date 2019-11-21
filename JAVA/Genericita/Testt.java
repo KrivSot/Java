@@ -25,12 +25,12 @@ public class Testt
         barva2.setColor(Color.pink);
         System.out.println("Nyní je barva růžová "+barva2.getColor());
         
-        /*Barva<BarvyCisla> barva3 = new Barva<BarvyCisla>(BarvyCisla.Zelená);
+        Barva<BarvyCisla> barva3 = new Barva<BarvyCisla>(BarvyCisla.Zelená);
         System.out.println(barva3.getColor());
-        System.out.println(barva3.getR()+" "+barva3.getG()+" "+barva3.getB());
-        barva2.setColor(BarvyCisla.Červená);
+        System.out.println(BarvyCisla.Zelená.getR()+" "+BarvyCisla.Zelená.getG()+" "+BarvyCisla.Zelená.getB());
+        barva3.setColor(BarvyCisla.Červená);
         System.out.println(barva3.getColor());
-        System.out.println(barva3.getR()+" "+barva3.getG()+" "+barva3.getB());*/
+        System.out.println(BarvyCisla.Červená.getR()+" "+BarvyCisla.Červená.getG()+" "+BarvyCisla.Červená.getB());
         
         Barva<Integer> barva4 = new Barva<Integer>(-16777183);
         System.out.println(barva4.getColor());
