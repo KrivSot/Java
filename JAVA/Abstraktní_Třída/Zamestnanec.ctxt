@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Zamestnanec
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Zam\u011Bstnanec}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Zam\u011Bstnanec}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=jmeno\ prijmeni\ datum_nastupu\ plat
+comment1.target=Zamestnanec(java.lang.String,\ java.lang.String,\ java.util.Date,\ double)
+comment2.params=
+comment2.target=void\ pracuj()
+comment3.params=
+comment3.target=void\ pozdrav()
+comment4.params=rok
+comment4.target=int\ PocetLetPrace(int)
+comment5.params=
+comment5.target=java.lang.String\ GetJmeno()
+comment6.params=
+comment6.target=void\ Datum_nastupu()
+numComments=7

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Ridic
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Ridic}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Ridic}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=jmeno\ prijmeni\ plat
+comment1.target=Ridic(java.lang.String,\ java.lang.String,\ double)
+comment2.params=
+comment2.target=void\ pracuj()
+numComments=3

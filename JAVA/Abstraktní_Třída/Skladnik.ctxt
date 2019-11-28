@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Skladnik
+comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Skladnik}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Skladnik}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=jmeno\ prijmeni\ plat
+comment1.target=Skladnik(java.lang.String,\ java.lang.String,\ double)
+comment1.text=\r\n
+comment2.params=
+comment2.target=void\ pracuj()
+numComments=3

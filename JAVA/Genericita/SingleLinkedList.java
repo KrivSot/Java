@@ -215,7 +215,7 @@ public class SingleLinkedList <T1>
         private T1 objekt;
         private Node next;
         private Node previous;
-        private Node PocetSedadel;
+        //private Node PocetSedadel;
 
         private Node(T1 value) {
             this.objekt = value;
