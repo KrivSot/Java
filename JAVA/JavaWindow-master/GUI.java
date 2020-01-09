@@ -20,7 +20,10 @@ import java.util.Calendar;
 import java.util.Date;
 import org.jdesktop.swingx.*;
 import java.text.DateFormat;
-
+import java.awt.FlowLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.BorderLayout;
 public class GUI extends JFrame {
 
     private JMenuBar menuBar;
@@ -52,6 +55,9 @@ public class GUI extends JFrame {
         JPanel contentPane = new JPanel(null);
         contentPane.setPreferredSize(new Dimension(500,400));
         contentPane.setBackground(new Color(192,192,192));
+        GridBagLayout layout = new GridBagLayout();
+        contentPane.setLayout(layout);
+        GridBagConstraints gbc = new GridBagConstraints();
 
         picker = new org.jdesktop.swingx.JXDatePicker();
         picker.setBackground(Color.BLUE);
@@ -168,20 +174,52 @@ public class GUI extends JFrame {
         textfield2.setFont(new Font("sansserif",0,12));
         textfield2.setText("");
         textfield2.setVisible(true);
-
         //adding components to contentPane panel
-        contentPane.add(textfield1);
-        contentPane.add(button1);
-        contentPane.add(combobox1);
-        contentPane.add(label1);
-        contentPane.add(label2);
-        contentPane.add(label3);
-        contentPane.add(label4);
-        contentPane.add(label5);
-        contentPane.add(radiobutton1);
-        contentPane.add(radiobutton2);
-        contentPane.add(textfield2);
-        contentPane.add(picker);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 0;
+        contentPane.add(label1,gbc);
+	gbc.gridx = 1;
+	gbc.gridy = 0;
+	gbc.gridwidth = 3;
+        contentPane.add(textfield1,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 1;
+	gbc.gridwidth = 1;
+        contentPane.add(label2,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;
+	gbc.gridy = 1;
+	gbc.gridwidth = 3;
+        contentPane.add(textfield2,gbc);
+        gbc.gridwidth = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 2;gbc.anchor = GridBagConstraints.SOUTHWEST;
+        contentPane.add(label3,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;
+	gbc.gridy = 2;
+	gbc.anchor = GridBagConstraints.SOUTHWEST;
+        contentPane.add(radiobutton1,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 3;
+	gbc.gridy = 2;
+        contentPane.add(radiobutton2,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;gbc.gridx = 0;gbc.gridy = 3;
+        contentPane.add(label4,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;gbc.gridy = 3;gbc.gridwidth = 3;
+        contentPane.add(combobox1,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;gbc.gridy = 4;gbc.gridwidth = 1;
+        contentPane.add(label5,gbc);
+        gbc.gridx = 1;gbc.gridy = 4;gbc.gridwidth = 3;
+        contentPane.add(picker,gbc);
+        gbc.gridx = 0;gbc.gridy = 5;gbc.gridwidth = 5;
+        contentPane.add(button1,gbc);
+	
 
         button1.addActionListener(new ActionListener() {
         @Override
