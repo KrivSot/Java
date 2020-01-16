@@ -45,8 +45,9 @@ public class GUI extends JFrame {
     private String os;
     public GUI(){
 
-        this.setTitle("GUI");
+        this.setTitle("Dotazník");
         this.setSize(500,400);
+        this.setResizable(false);
         //menu generate method
         generateMenu();
         this.setJMenuBar(menuBar);
@@ -176,50 +177,50 @@ public class GUI extends JFrame {
         textfield2.setVisible(true);
         //adding components to contentPane panel
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 0;
-	gbc.gridy = 0;
+    gbc.gridx = 0;
+    gbc.gridy = 0;
         contentPane.add(label1,gbc);
-	gbc.gridx = 1;
-	gbc.gridy = 0;
-	gbc.gridwidth = 3;
+    gbc.gridx = 1;
+    gbc.gridy = 0;
+    gbc.gridwidth = 3;
         contentPane.add(textfield1,gbc);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 0;
-	gbc.gridy = 1;
-	gbc.gridwidth = 1;
+    gbc.gridx = 0;
+    gbc.gridy = 1;
+    gbc.gridwidth = 1;
         contentPane.add(label2,gbc);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 1;
-	gbc.gridy = 1;
-	gbc.gridwidth = 3;
+    gbc.gridx = 1;
+    gbc.gridy = 1;
+    gbc.gridwidth = 3;
         contentPane.add(textfield2,gbc);
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 0;
-	gbc.gridy = 2;gbc.anchor = GridBagConstraints.SOUTHWEST;
+    gbc.gridx = 0;
+    gbc.gridy = 2;gbc.anchor = GridBagConstraints.SOUTHWEST;
         contentPane.add(label3,gbc);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 1;
-	gbc.gridy = 2;
-	gbc.anchor = GridBagConstraints.SOUTHWEST;
+    gbc.gridx = 1;
+    gbc.gridy = 2;
+    gbc.anchor = GridBagConstraints.SOUTHWEST;
         contentPane.add(radiobutton1,gbc);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 3;
-	gbc.gridy = 2;
+    gbc.gridx = 3;
+    gbc.gridy = 2;
         contentPane.add(radiobutton2,gbc);
         gbc.fill = GridBagConstraints.HORIZONTAL;gbc.gridx = 0;gbc.gridy = 3;
         contentPane.add(label4,gbc);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 1;gbc.gridy = 3;gbc.gridwidth = 3;
+    gbc.gridx = 1;gbc.gridy = 3;gbc.gridwidth = 3;
         contentPane.add(combobox1,gbc);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-	gbc.gridx = 0;gbc.gridy = 4;gbc.gridwidth = 1;
+    gbc.gridx = 0;gbc.gridy = 4;gbc.gridwidth = 1;
         contentPane.add(label5,gbc);
         gbc.gridx = 1;gbc.gridy = 4;gbc.gridwidth = 3;
         contentPane.add(picker,gbc);
         gbc.gridx = 0;gbc.gridy = 5;gbc.gridwidth = 5;
         contentPane.add(button1,gbc);
-	
+    
 
         button1.addActionListener(new ActionListener() {
         @Override
@@ -227,19 +228,28 @@ public class GUI extends JFrame {
             jmeno = textfield1.getText();
             prijmeni = textfield2.getText();
             if(radiobutton1.isSelected()){ as = "Ano"; }
-            else{ as = "Ne"; }
-            JFormattedTextField editor = picker.getEditor();
-            Date dateInDatePicker = (Date) editor.getValue();
-            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");  
-            String dn = dateFormat.format(dateInDatePicker);
-            os = String.valueOf(combobox1.getSelectedItem());
-            Prepravka pr = new Prepravka(jmeno,prijmeni,as,os,dn);
-            System.setProperty("swing.defaultlaf", "com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new GUI2(pr);
+            else if(radiobutton2.isSelected()){ as = "Ne";}
+            else{ as = "error";}
+            
+            if((jmeno == "" || jmeno.isEmpty()) || (prijmeni.isEmpty() || prijmeni == "")|| (as == "error"))
+            {
+                System.out.println("Nejsou vyplnìny všechny informace!");
             }
-        });
+            else
+            {
+                    JFormattedTextField editor = picker.getEditor();
+                    Date dateInDatePicker = (Date) editor.getValue();
+                    DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");  
+                    String dn = dateFormat.format(dateInDatePicker);
+                    os = String.valueOf(combobox1.getSelectedItem());
+                    Prepravka pr = new Prepravka(jmeno,prijmeni,as,os,dn);
+                    System.setProperty("swing.defaultlaf", "com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+                javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        new GUI2(pr);
+                    }
+                });
+            }
         }
     });
         //adding panel to JFrame and seting of window position and close operation

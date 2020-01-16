@@ -32,16 +32,20 @@ public class GUI2 extends JFrame {
     //Constructor 
     public GUI2(Prepravka prepravka){
 
-        this.setTitle("GUI_project");
+        this.setTitle("Údaje");
         this.setSize(500,400);
         //menu generate method
         generateMenu();
         this.setJMenuBar(menuBar);
+        this.setResizable(false);
 
         //pane with null layout
         JPanel contentPane = new JPanel(null);
-        contentPane.setPreferredSize(new Dimension(500,400));
+        GridBagLayout layout = new GridBagLayout();
+        contentPane.setPreferredSize(new Dimension(225,200));
         contentPane.setBackground(new Color(192,192,192));
+        contentPane.setLayout(layout);
+        GridBagConstraints gbc = new GridBagConstraints();
 
 
         label1 = new JLabel();
@@ -137,20 +141,50 @@ public class GUI2 extends JFrame {
         label9.setVisible(true);
         
         //adding components to contentPane panel
-        contentPane.add(label1);
-        contentPane.add(label2);
-        contentPane.add(label3);
-        contentPane.add(label4);
-        contentPane.add(label5);
-        contentPane.add(label6);
-        contentPane.add(label7);
-        contentPane.add(label8);
-        contentPane.add(label9);
-        contentPane.add(label10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 0;
+        contentPane.add(label1,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 1;
+        contentPane.add(label2,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 2;
+        contentPane.add(label3,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 3;
+        contentPane.add(label4,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;
+	gbc.gridy = 0;
+        contentPane.add(label5,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;
+	gbc.gridy = 1;
+        contentPane.add(label6,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;
+	gbc.gridy = 2;
+        contentPane.add(label7,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;
+	gbc.gridy = 3;
+        contentPane.add(label8,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 1;
+	gbc.gridy = 4;
+        contentPane.add(label9,gbc);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+	gbc.gridx = 0;
+	gbc.gridy = 4;
+        contentPane.add(label10,gbc);
 
         //adding panel to JFrame and seting of window position and close operation
         this.add(contentPane);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.pack();
         this.setVisible(true);
