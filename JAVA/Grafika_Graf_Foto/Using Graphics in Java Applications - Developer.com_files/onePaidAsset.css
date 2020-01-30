@@ -1,0 +1,50 @@
+#oneAssetIFrame {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: auto;
+}
+#assetsListings {
+	background: #CFCFCF;
+}
+.assetNew-title {
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    vertical-align: middle;
+	width: 60%;	
+
+}
+.sblLoadingDiv {
+	display: none;
+}
+.assetNew {
+    float: left;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+	margin-bottom:10px;
+    overflow: hidden;
+    padding: 0;
+    background: #CFCFCF; /* for non-css3 browsers */
+	display: table;
+	width:95%;
+}
+.assetNew .assetNew-icon{
+    float: left;
+    height: 32px;
+    margin: 0;
+    width: 32px;
+}
+.assetNew .assetNew-download{
+    float: right;
+	margin: 8px;
+}
+.assetNew .assetNew-download .assetNew-download-link {
+	color:#CF0000;
+	text-decoration:underline;
+}
+.articlecategorysummary{
+	margin-bottom:10px;
+}

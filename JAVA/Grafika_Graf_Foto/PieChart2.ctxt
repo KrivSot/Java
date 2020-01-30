@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=PieChart2
+comment1.params=hodnoty\ nazvy
+comment1.target=PieChart2(double[],\ java.lang.String[])
+comment2.params=colors\ values\ labels
+comment2.target=PieChart2(java.awt.Color[],\ double[],\ java.lang.String[])
+comment3.params=g
+comment3.target=void\ paintComponent(java.awt.Graphics)
+comment4.params=g\ text\ angle
+comment4.target=void\ drawLabel(java.awt.Graphics,\ java.lang.String,\ double)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6
