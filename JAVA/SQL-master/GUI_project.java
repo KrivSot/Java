@@ -82,10 +82,11 @@ public class GUI_project extends JFrame
         label1.setText("Vypsat");
         label1.setVisible(true);
         //adding components to contentPane panel
-        contentPane.add(button1);
+       contentPane.add(button1);
         contentPane.add(combobox1);
         contentPane.add(label1);
         contentPane.add(scroll);
+        contentPane.add(table);
         vytvorUdalosti();
         //adding panel to JFrame and seting of window position and close operation
         this.add(contentPane);

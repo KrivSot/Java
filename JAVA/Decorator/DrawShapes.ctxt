@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DrawShapes
+comment1.params=
+comment1.target=DrawShapes()
+comment2.params=g
+comment2.target=void\ paintComponent(java.awt.Graphics)
+comment3.params=arg
+comment3.target=void\ main(java.lang.String[])
+comment4.params=
+comment4.target=void\ run()
+numComments=5
