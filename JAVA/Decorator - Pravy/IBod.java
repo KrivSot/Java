@@ -1,7 +1,6 @@
-/* UTF-8 codepage: Příliš žluťoučký kůň úpěl ďábelské ódy. ÷ × ¤
- * «Stereotype», Section mark-§, Copyright-©, Alpha-α, Beta-β, Smile-☺
- */
-
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.Line2D;
 
 
 
@@ -12,8 +11,9 @@
  * @author  author name
  * @version 0.00.0000 — 20yy-mm-dd
  */
-public interface ITvar
+public interface IBod
 {
-    public String vykresliTvar();
-    public String getTvar();
+    public void vykresli();
+    public int getBodX();
+    public int getBodY();
 }
