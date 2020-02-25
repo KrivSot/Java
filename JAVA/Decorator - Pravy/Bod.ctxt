@@ -1,14 +1,14 @@
 #BlueJ class context
 comment0.target=Bod
 comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Primka}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Primka}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
-comment1.params=
-comment1.target=Bod()
+comment1.params=x\ y
+comment1.target=Bod(int,\ int)
 comment2.params=
-comment2.target=void\ vykresli()
+comment2.target=int\ getBodX()
 comment3.params=
-comment3.target=int\ getBodX()
-comment4.params=
-comment4.target=void\ Platno()
-comment5.params=
-comment5.target=int\ getBodY()
+comment3.target=int\ getBodY()
+comment4.params=x
+comment4.target=void\ setX(int)
+comment5.params=y
+comment5.target=void\ setY(int)
 numComments=6

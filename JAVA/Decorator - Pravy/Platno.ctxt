@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Platno
+comment0.text=\r\n\ T\u0159\u00EDda\ {@code\ Platno}\ je\ hlavn\u00ED\ t\u0159\u00EDdou\ projektu,\r\n\ kter\u00FD\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
+comment1.params=
+comment1.target=Platno()
+comment1.text=\r\n\ Metoda,\ prost\u0159ednictv\u00EDm\ n\u00ED\u017E\ se\ spou\u0161t\u00ED\ cel\u00E1\ aplikace.\r\n\r\n\ @param\ args\ Parametry\ p\u0159\u00EDkazov\u00E9ho\ \u0159\u00E1dku\r\n
+comment2.params=primka
+comment2.target=void\ vykresliPrimku(primka)
+comment3.params=bod
+comment3.target=void\ vykresliBod(Bod)
+comment4.params=
+comment4.target=void\ vykresliTvar()
+numComments=5

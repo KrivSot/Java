@@ -13,7 +13,8 @@ import java.awt.geom.Line2D;
  */
 public interface IBod
 {
-    public void vykresli();
     public int getBodX();
     public int getBodY();
+    public void setX(int x);
+    public void setY(int y);
 }

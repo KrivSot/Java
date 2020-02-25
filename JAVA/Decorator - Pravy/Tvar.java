@@ -12,29 +12,12 @@
  * @author  author name
  * @version 0.00.0000 — 20yy-mm-dd
  */
-public class Tvar implements IBod
+public class Tvar
 {
-    int x = 50;
-    int y = 50;
     /***************************************************************************
      */
     public Tvar()
     {
-    }
-    
-    @Override
-    public void vykresli() {
-    }
-    
-    @Override
-    public int getBodX()
-    {
-        return this.x;
-    }
-    
-    @Override
-    public int getBodY()
-    {
-        return this.y;
+        
     }
 }
