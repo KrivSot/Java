@@ -14,10 +14,13 @@
  */
 public class Tvar
 {
-    /***************************************************************************
-     */
-    public Tvar()
+    protected IBod bod1;
+    int width;
+    int height;
+    public Tvar(IBod bod1,int w,int h)
     {
-        
+        this.bod1 = bod1;
+        this.width = w;
+        this.height = h;
     }
 }

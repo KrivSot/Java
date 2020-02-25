@@ -66,12 +66,16 @@ public class Platno extends JFrame
         Graphics2D g2d = (Graphics2D) gr;
         g2d.setStroke(new BasicStroke(3));
         g2d.setColor(Color.red);
-        g2d.drawRect(50,50,1,1);
+        g2d.drawRect(bod.getBodX(),bod.getBodY(),1,1);
     }
     
-    public void vykresliTvar()
+    public void vykresliTvar(Tvar tvar)
     {
-    
+        Graphics gr = jf.getGraphics();
+        Graphics2D g2d = (Graphics2D) gr;
+        g2d.setStroke(new BasicStroke(3));
+        g2d.setColor(Color.red);
+        g2d.draw3DRect(tvar.bod1.getBodX(), tvar.bod1.getBodY(), tvar.width, tvar.height, false);
     }
 }
 
