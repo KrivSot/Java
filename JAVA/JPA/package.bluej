@@ -1,17 +1,17 @@
 #BlueJ package file
-dependency1.from=Majitel
+dependency1.from=TvorbaDotazy
 dependency1.to=Pes
 dependency1.type=UsesDependency
 dependency2.from=TvorbaDotazy
-dependency2.to=Pes
+dependency2.to=Majitel
 dependency2.type=UsesDependency
-dependency3.from=TvorbaDotazy
-dependency3.to=Majitel
+dependency3.from=Majitel
+dependency3.to=Pes
 dependency3.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=232
-editor.fx.0.y=82
+editor.fx.0.height=1000
+editor.fx.0.width=1296
+editor.fx.0.x=-8
+editor.fx.0.y=-8
 objectbench.height=204
 objectbench.width=1256
 package.divider.horizontal=0.701063829787234

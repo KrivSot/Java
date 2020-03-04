@@ -175,3 +175,14 @@ Configuration path: ?
 [2020-03-04 10:30:42 #3 store] 
 Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is closed by 11016@I-UC71-06
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 10:32:17 #1 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is opened by 244@I-UC71-06
+
+[2020-03-04 10:32:17 #2 store] 
+Configuration path: ?
+
+[2020-03-04 10:37:06 #3 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is closed by 244@I-UC71-06
+
