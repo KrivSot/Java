@@ -3,4 +3,6 @@ comment0.target=Tvar
 comment0.text=\r\n\ Instance\ t\u0159\u00EDdy\ {@code\ Tvar}\ p\u0159edstavuj\u00ED\ ...\r\n\ The\ {@code\ Tvar}\ class\ instances\ represent\ ...\r\n\r\n\ @author\ \ author\ name\r\n\ @version\ 0.00.0000\ \u2014\ 20yy-mm-dd\r\n
 comment1.params=bod1\ w\ h
 comment1.target=Tvar(IBod,\ int,\ int)
-numComments=2
+comment2.params=x\ y
+comment2.target=void\ setXaY(int,\ int)
+numComments=3

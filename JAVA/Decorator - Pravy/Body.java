@@ -25,7 +25,9 @@ public class Body
     Platno pl = new Platno();
     Bod bod1 = new Bod(150,120);
     Bod bod2 = new Bod(200,160);
+    Bod bod3 = new Bod(175,100);
     primka primka = new primka(bod1,bod2);
+    Tvar tvar1 = new Tvar(bod1,30,30);
     /***************************************************************************
      * Inicializace předcházející spuštění každého testu a připravující tzv.
      * přípravek (fixture), což je sada objektů, s nimiž budou testy pracovat.

@@ -51,6 +51,15 @@ public class Platno extends JFrame
         jf.setVisible(true);
     }
     
+    public void vykresliBod(Bod bod)
+    {
+        Graphics gr = jf.getGraphics();
+        Graphics2D g2d = (Graphics2D) gr;
+        g2d.setStroke(new BasicStroke(3));
+        g2d.setColor(Color.blue);
+        g2d.drawRect(bod.getBodX(),bod.getBodY(),1,1);
+    }
+    
     public void vykresliPrimku(primka primka)
     {
         Graphics gr = jf.getGraphics();
@@ -60,22 +69,19 @@ public class Platno extends JFrame
         g2d.drawLine(primka.bod1.getBodX(),primka.bod1.getBodY(),(primka.bod2.getBodX()),primka.bod2.getBodY());
     }
     
-    public void vykresliBod(Bod bod)
-    {
-        Graphics gr = jf.getGraphics();
-        Graphics2D g2d = (Graphics2D) gr;
-        g2d.setStroke(new BasicStroke(3));
-        g2d.setColor(Color.red);
-        g2d.drawRect(bod.getBodX(),bod.getBodY(),1,1);
-    }
-    
     public void vykresliTvar(Tvar tvar)
     {
         Graphics gr = jf.getGraphics();
         Graphics2D g2d = (Graphics2D) gr;
         g2d.setStroke(new BasicStroke(3));
-        g2d.setColor(Color.red);
+        g2d.setColor(Color.black);
         g2d.draw3DRect(tvar.bod1.getBodX(), tvar.bod1.getBodY(), tvar.width, tvar.height, false);
     }
+    
+    public void vykresliVse(Tvar tvar, primka primka, Bod bod)
+    {
+        vykresliBod(bod);
+        vykresliPrimku(primka);
+        vykresliTvar(tvar);
+    }
 }
-

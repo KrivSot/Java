@@ -24,4 +24,24 @@ public class primka
         this.bod2.setX(x2);
         this.bod2.setY(y2);
     }
+    
+    public void SetX1(int x1)
+    {
+        this.bod1.setX(x1);
+    }
+    
+    public void SetY1(int y1)
+    {
+        this.bod1.setY(y1);
+    }
+    
+    public void SetX2(int x2)
+    {
+        this.bod2.setX(x2);
+    }
+    
+    public void SetY2(int y2)
+    {
+        this.bod2.setX(y2);
+    }
 }

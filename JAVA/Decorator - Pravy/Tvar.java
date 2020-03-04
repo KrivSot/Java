@@ -23,4 +23,10 @@ public class Tvar
         this.width = w;
         this.height = h;
     }
+    
+    public void setXaY(int x,int y)
+    {
+        this.bod1.setX(x);
+        this.bod1.setY(y);
+    }
 }
