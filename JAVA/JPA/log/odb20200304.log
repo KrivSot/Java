@@ -132,3 +132,46 @@ Configuration path: ?
 [2020-03-04 10:28:05 #33 store] 
 Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is closed by 10904@I-UC71-06
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 10:28:21 #1 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is opened by 5300@I-UC71-06
+
+[2020-03-04 10:28:21 #2 store] 
+Configuration path: ?
+
+[2020-03-04 10:28:39 #3 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is closed by 5300@I-UC71-06
+
+[2020-03-04 10:28:46 #34 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is opened by 10904@I-UC71-06
+
+[2020-03-04 10:28:46 #35 store] 
+Configuration path: ?
+
+[2020-03-04 10:28:46 #36 type.registry] 
+New type Majitel
+
+[2020-03-04 10:28:46 #37 type.registry] 
+New type Pes
+
+[2020-03-04 10:28:46 #38 type.registry] 
+New type java.util.ArrayList<Pes>
+
+[2020-03-04 10:28:46 #39 type.registry] 
+New type java.util.ArrayList<java.lang.Object>
+
+[2020-03-04 10:28:46 #40 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is closed by 10904@I-UC71-06
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 10:29:11 #1 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is opened by 11016@I-UC71-06
+
+[2020-03-04 10:29:11 #2 store] 
+Configuration path: ?
+
+[2020-03-04 10:30:42 #3 store] 
+Database 'C:\Users\janiak\Documents\GitHub\Java\JAVA\JPA\majitel.odb' is closed by 11016@I-UC71-06
+
