@@ -2,56 +2,55 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import java.util.List;
 
 
 public class TvorbaDotazy {
     //udelat getry a setry pro majitele a psi
     public static void main( String[ ] args ) {
-        EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Majitel.odb" );
-        EntityManager em = emfactory.createEntityManager( );
+        EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("majitel.odb");
+        EntityManager em = emfactory.createEntityManager();
         em.getTransaction( ).begin( );
         
         //Create Department Entity
-        Department department = new Department();
-        department.setName("Propagace");
         
         //Store Department
-        em.persist(department);
-      
+        Pes pes1 = new Pes(1,"Rex");
+        Pes pes2 = new Pes(2,"Alík");
+        Pes pes3 = new Pes(1,"Pes");
+        Pes pes4 = new Pes(3,"Jack");
         //Create Employee1 Entity
         Majitel majitel1 = new Majitel();
-        majitel1.setEname("Jirka");
-        majitel1.setSalary(30000.0);
-        majitel1.setDeg("Vedoucí oddělení");
-        employee1.setDepartment(department);
+        majitel1.setJmeno("Jirka");
+        majitel1.setPrijmeni("Novák");
+        majitel1.addPes(pes1);
+        majitel1.addPes(pes3);
         
         //Create Employee2 Entity
-        Employee employee2 = new Employee();
-        employee2.setEname("Renata");
-        employee2.setSalary(43000.0);
-        employee2.setDeg("Mladší programátor");
-        employee2.setDepartment(department);
-        
+        Majitel majitel2 = new Majitel();
+        majitel2.setJmeno("Jan");
+        majitel2.setPrijmeni("Lehký");
+        majitel2.addPes(pes2);
         //Create Employee3 Entity
-        Employee employee3 = new Employee();
-        employee3.setEname("Petr");
-        employee3.setSalary(50000.0);
-        employee3.setDeg("Starší programátor");
-        employee3.setDepartment(department);
+        Majitel majitel3 = new Majitel();
+        majitel3.setJmeno("Tomáš");
+        majitel3.setPrijmeni("Zahradník");
+        majitel2.addPes(pes4);
         
         //Store Employees
-        em.persist(employee1);
-        em.persist(employee2);
-        em.persist(employee3);
-        
-        Query q1 = em.createQuery("SELECT c FROM Majitel c");
+        em.persist(majitel1);
+        em.persist(majitel2);
+        em.persist(majitel3);
+        em.persist(pes1);
+        em.persist(pes2);
+        em.persist(pes3);
+        em.persist(pes4);
+        //em.persist(pes1);
+        /*Query q1 = em.createQuery("SELECT c FROM Majitel c");
         List list1 = q1.getResultList();
         for(Object element : list1) {
             Majitel mjtl = (Majitel)element;
             System.out.println(mjtl.getJmeno());
-            
-        }
+        }*/
         em.getTransaction().commit();
         em.close();
         emfactory.close();

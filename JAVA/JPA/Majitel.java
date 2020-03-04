@@ -19,6 +19,7 @@ public class Majitel
     int id;
     String jmeno;
     String prijmeni;
+    
     @OneToMany
     ArrayList<Pes> seznamPsu = new ArrayList<Pes>();
     
@@ -27,20 +28,36 @@ public class Majitel
         
     }
     
-    public Majitel(int i, String jmeno, String prijmeni)
+    public Majitel(String jmeno, String prijmeni)
     { 
-        this.id = i;
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
     }
     
-    public void pridejPsa(Pes pes)
+    public void addPes(Pes pes)
     {
         seznamPsu.add(pes);
     }
     
+    //getry
     public String getJmeno()
     {
         return jmeno;
+    }
+    
+    public String getPrijmeni()
+    {
+        return prijmeni;
+    }
+    
+    //setry
+    public void setJmeno(String jmeno)
+    {
+        this.jmeno = jmeno;
+    }
+    
+    public void setPrijmeni(String prijmeni)
+    {
+        this.prijmeni = prijmeni;
     }
 }
