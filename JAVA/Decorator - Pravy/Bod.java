@@ -20,26 +20,39 @@ public class Bod implements IBod
     }
     
     @Override
-    public int getBodX()
+    public int getBodX1()
     {
         return this.x;
     }
     
     @Override
-    public int getBodY()
+    public int getBodX2()
+    {
+        return this.x;
+    }
+    
+    @Override
+    public int getBodY1()
     {
         return this.y;
     }
     
     @Override
-    public void setX(int x)
+    public int getBodY2()
     {
-        this.x = x;
+        return this.y;
     }
     
     @Override
-    public void setY(int y)
+    public void setX1aY1(int x,int y)
     {
+        this.x = x;
         this.y = y;
+    }
+    
+    @Override
+    public void setX2aY2(int x,int y)
+    {
+        setX1aY1(x,y);
     }
 }
